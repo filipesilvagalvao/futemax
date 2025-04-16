@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    background-color: #000;
+}
+
+/*Header*/
+header {
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.logo-futemax {
+    background-image: url(/img/bg-logo.webp),
+        url(/img/bg-header-repeat.webp),
+        url(/img/bg-header.png);
+    background-position: center;
+    background-repeat: no-repeat, repeat, no-repeat;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #1c1c1c;
+    width: 100%;
+}
+
+.nav-menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-menu li {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.search {
+    background-color: #333;
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #beff00;
+    border-bottom: 2px solid #beff00;
+}
+
+.search form {
+    position: relative;
+    background-color: black;
+    padding: 5px;
+    border-radius: 30px;
+    width: min(90%, 1800px);
+
+}
+
+.search input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: none;
+    color: #fff;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.search button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    right: 5px;
+    transform: translate(0, -50%);
+    background-color: #d2ff00;
+    border: none;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+/*Main*/
+
+.home-content {
+    color: #eee;
+}
+
+.home-content h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #d2ff00;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+#aviso{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#aviso img{
+    width: 100px;
+    height: auto;
+}
+
+#soccer-live {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#soccer-live a {
+    text-decoration: none;
+    color: #eee;
+}
+
+#soccer-live article {
+    height: 250px;
+    width: 350px;
+    border: 1px solid #d2ff00;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.match-teams {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+}
+
+.hour-match {
+    border: 1px solid #beff00;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.team img {
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.versus i {
+    font-size: 1.5rem;
+}
+
+.champeonship {
+    border: 1px solid #beff00;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#soccer-live article i.fa-circle-play {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 1.5rem;
+    color: #3eff2c;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+#soccer-live article:hover i.fa-circle-play {
+    opacity: 1;
+}
+
+/*footer*/
+footer {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    border-top: 2px solid #d2ff00 ;
+}
