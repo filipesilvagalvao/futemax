@@ -51,17 +51,25 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .nav-menu li {
     list-style: none;
     font-size: 1rem;
+    font-weight: bold;
+    
+}
+
+.nav-menu li:hover a{
+    background-color: #3eff2c;
+    color: #000;
 }
 
 .nav-menu a {
     text-decoration: none;
     color: #fff;
+    padding: 5px;
 }
 
 .search {
@@ -221,7 +229,19 @@ header {
 #soccer-live article:hover i.fa-circle-play {
     opacity: 1;
 }
+/*informações de texto*/
+.text-information {
+    margin: 40px;
+    text-align: center;
+}
 
+.text-information h2{
+    color: #ddd;
+}
+.text-information p{
+    margin-top: 20px;
+    color: #888;
+}
 /*footer*/
 footer {
     background-color: #222;
