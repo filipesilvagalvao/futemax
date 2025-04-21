@@ -157,11 +157,6 @@ header {
     margin-top: 30px;
 }
 
-#soccer-live a {
-    text-decoration: none;
-    color: #eee;
-}
-
 #soccer-live article {
     height: 250px;
     width: 350px;
@@ -172,6 +167,7 @@ header {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 
 .match-teams {

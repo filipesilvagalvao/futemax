@@ -855,9 +855,6 @@ function makeThumbsGames() {
 
         if(!(obj.channels[0] == 'Nenhum canal disponível')){
 
-        const a = document.createElement('a')
-        a.href = '#'
-
         const article = document.createElement('article')
 
         const divHour = document.createElement('div')
@@ -926,11 +923,26 @@ function makeThumbsGames() {
 
         article.append(divHour,divMatchTeams, divChampeonship, iPlay)
 
-        a.appendChild(article)
-
-        section.appendChild(a)}
+        section.appendChild(article)}
 
     })
 }
 
 makeThumbsGames()
+
+function showMatchPlayers(e) {
+    e.stopPropagation()
+
+    const playersModal = document.querySelector('.players-modal')
+
+    playersModal.classList.toggle('active')
+}
+
+const arrEvents = Array.from(document.querySelectorAll('#soccer-live article'))
+
+arrEvents.push(document.querySelector('#close-modal'),document.querySelector('.players-modal'))
+
+arrEvents.forEach((article)=>{
+    article.addEventListener('click', showMatchPlayers)
+})
+
