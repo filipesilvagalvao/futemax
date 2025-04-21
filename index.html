@@ -69,25 +69,20 @@
                 <i class="fa-solid fa-circle-xmark"></i>
             </div>
             <div id="screen-modal">
-                <iframe src="https://embedcanaistv.com/espn/" frameborder="0" allowfullscreen allow="encrypted-media"></iframe>
+                <iframe src="" frameborder="0" allowfullscreen allow="encrypted-media"></iframe>
             </div>
             <div id="btns-modal">
-                <button>opção 1</button>
-                <button>opção 2</button>
-                <button>opção 3</button>
-                <button>opção 4</button>
-                <button>opção 5</button>
-                <button>opção 6</button>
-                <button>opção 7</button>
-                <button>opção 8</button>
-                <button>opção 9</button>
-                <button>opção 10</button>
-                <button>opção 11</button>
-                <button>opção 12</button>
-                <button>opção 13</button>
-                <button>opção 14</button>
-                <button>opção 15</button>
             </div>
+            <script>
+                const btns = document.querySelectorAll('#btns-modal button');
+                const screenModal = document.querySelector('#screen-modal iframe');
+
+                btns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        screenModal.src = btn.value;
+                    });
+                });
+            </script>
         </section>
     </main>
     <footer>
