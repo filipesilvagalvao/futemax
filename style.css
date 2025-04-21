@@ -11,6 +11,7 @@
 
 body {
     background-color: #000;
+    position: relative;
 }
 
 /*Header*/
@@ -58,10 +59,10 @@ header {
     list-style: none;
     font-size: 1rem;
     font-weight: bold;
-    
+
 }
 
-.nav-menu li:hover a{
+.nav-menu li:hover a {
     background-color: #3eff2c;
     color: #000;
 }
@@ -133,7 +134,7 @@ header {
     margin-bottom: 30px;
 }
 
-#aviso{
+#aviso {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -142,7 +143,7 @@ header {
     font-weight: bold;
 }
 
-#aviso img{
+#aviso img {
     width: 100px;
     height: auto;
 }
@@ -230,19 +231,22 @@ header {
 #soccer-live article:hover i.fa-circle-play {
     opacity: 1;
 }
+
 /*informações de texto*/
 .text-information {
     margin: 40px;
     text-align: center;
 }
 
-.text-information h2{
+.text-information h2 {
     color: #ddd;
 }
-.text-information p{
+
+.text-information p {
     margin-top: 20px;
     color: #888;
 }
+
 /*footer*/
 footer {
     background-color: #222;
@@ -253,9 +257,88 @@ footer {
     align-items: center;
     text-align: center;
     margin-top: 30px;
-    border-top: 2px solid #d2ff00 ;
+    border-top: 2px solid #d2ff00;
 }
 
 #copy {
     margin: 20px 0;
+}
+
+/*Modal players*/
+.players-modal {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.685);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#screen-modal {
+    width: min(1000px, 95%);
+}
+
+#screen-modal iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border: 2px solid #beff00;
+    border-bottom: none;
+}
+
+#btns-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: min(1000px, 95%);
+    border: 2px solid #beff00;
+    background-color: #000;
+    padding:10px 0;
+}
+
+#btns-modal button {
+    height: 40px;
+    width: 100px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #ddd;
+    font-weight: bolder;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#btns-modal button:hover{
+    background-color: #beff00;
+    color: #000;
+}
+
+#close-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    width: min(1000px, 95%);
+}
+
+#close-modal i{
+    color: red;
+    font-size: 2rem;
+    margin: 10px 0;
+    background-color: #ddd;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+.active {
+    display: flex;
 }
