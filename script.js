@@ -949,4 +949,6 @@ function updateMatchStatus() {
 // Chama a função para atualizar o status dos jogos
 updateMatchStatus();
 
+setInterval(updateMatchStatus, 60 * 1000); // Atualiza a cada minuto
+
 
