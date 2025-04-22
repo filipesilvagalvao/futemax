@@ -939,8 +939,10 @@ function updateMatchStatus() {
 
       if (now >= matchDate && now <= matchEndTime) {
         hourSpan.innerText = 'AO VIVO'; // Atualiza para "Ao Vivo" se o jogo está em andamento
+        hourSpan.style.backgroundColor = '#FF0000'; // Altera a cor de fundo para vermelho
       } else if (now > matchEndTime) {
         hourSpan.innerText = 'ENCERRADO'; // Atualiza para "Encerrado" se o jogo já terminou
+        hourSpan.style.backgroundColor = '#000'; // Altera a cor de fundo para preto
       }
     }
   });
