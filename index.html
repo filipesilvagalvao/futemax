@@ -42,9 +42,9 @@
         </nav>
 
         <div class="search">
-            <form>
-                <input type="search" name="" id="" placeholder="Pesquisar Jogos">
-                <button>
+            <form onsubmit="return false;"> <!-- Evita o comportamento padrão de envio do formulário -->
+                <input type="search" id="search-input" placeholder="Pesquisar Jogos">
+                <button type="button">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>

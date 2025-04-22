@@ -899,6 +899,30 @@ arrEvents.forEach((article) => {
   article.addEventListener('click', showMatchPlayers)
 })
 
+function filterGames() {
+  const searchInput = document.querySelector('#search-input'); // Campo de entrada para pesquisa
+  const articles = document.querySelectorAll('#soccer-live article'); // Todos os jogos exibidos
+
+  searchInput.addEventListener('input', () => {
+    const searchValue = searchInput.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""); // Normaliza o texto digitado
+
+    articles.forEach((article) => {
+      const team1 = article.querySelector('.team:first-child figcaption').innerText.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+      const team2 = article.querySelector('.team:last-child figcaption').innerText.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+
+      // Verifica se o texto digitado corresponde ao nome de algum dos times
+      if (team1.includes(searchValue) || team2.includes(searchValue)) {
+        article.style.display = ''; // Mostra o jogo
+      } else {
+        article.style.display = 'none'; // Esconde o jogo
+      }
+    });
+  });
+}
+
+// Chama a função após carregar os jogos
+filterGames();
+
 
 
 
