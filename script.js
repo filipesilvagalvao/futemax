@@ -923,6 +923,30 @@ function filterGames() {
 // Chama a função após carregar os jogos
 filterGames();
 
+function updateMatchStatus() {
+  const articles = document.querySelectorAll('#soccer-live article'); // Seleciona todos os jogos
+  const now = new Date(); // Obtém a data e hora atual
 
+  articles.forEach((article) => {
+    const hourSpan = article.querySelector('.hour-match > span'); // Seleciona o elemento do horário
+    const matchTime = hourSpan.innerText; // Obtém o horário do jogo no formato "HH:mm"
+
+    if (matchTime && matchTime.includes(':')) {
+      const [hours, minutes] = matchTime.split(':').map(Number); // Divide o horário em horas e minutos
+      const matchDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hours, minutes); // Cria um objeto Date para o horário do jogo
+
+      const matchEndTime = new Date(matchDate.getTime() + 2 * 60 * 60 * 1000); // Calcula o horário de término do jogo (2 horas após o início)
+
+      if (now >= matchDate && now <= matchEndTime) {
+        hourSpan.innerText = 'AO VIVO'; // Atualiza para "Ao Vivo" se o jogo está em andamento
+      } else if (now > matchEndTime) {
+        hourSpan.innerText = 'ENCERRADO'; // Atualiza para "Encerrado" se o jogo já terminou
+      }
+    }
+  });
+}
+
+// Chama a função para atualizar o status dos jogos
+updateMatchStatus();
 
 
