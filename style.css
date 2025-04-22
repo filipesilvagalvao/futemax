@@ -224,6 +224,8 @@ header {
     color: #3eff2c;
     opacity: 0;
     transition: all 0.3s;
+    background-color: #000000;
+    border-radius: 100%;
 }
 
 #soccer-live article:hover i.fa-circle-play {
