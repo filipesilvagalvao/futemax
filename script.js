@@ -873,11 +873,11 @@ function insetPlayers(e) {
   matchChannels.forEach((canal) => {
 
     channels.forEach((obj) => {
-
+      let n = 0
       if (canal.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "") == obj.channel.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")) {
         obj.links.forEach((link) => {
-
-          btn.innerHTML += `<button value="${link}" class="btn">opção</button>`
+          n++
+          btn.innerHTML += `<button value="${link}" class="btn">opção ${n}</button>`
         })
 
       }
