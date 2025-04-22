@@ -73,16 +73,6 @@
             </div>
             <div id="btns-modal">
             </div>
-            <script>
-                const btns = document.querySelectorAll('#btns-modal button');
-                const screenModal = document.querySelector('#screen-modal iframe');
-
-                btns.forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        screenModal.src = btn.value;
-                    });
-                });
-            </script>
         </section>
     </main>
     <footer>
