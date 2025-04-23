@@ -50,29 +50,48 @@
         </div>
 
     </header>
-    <script src="script.js" defer></script>
-    <main class="home-content">
-        <h1>Assistir Futebol ao vivo</h1>
-        <p id="aviso">Desbloqueie qualquer site: <a href="https://one.one.one.one/pt-BR/" target="_blank"><img width="846" height="266" src="https://supertvaovivo.fan/wp-content/uploads/2025/03/warp.webp"></a></p>
+    <script>
+        document.querySelector('.search').style.display = 'none'; // Esconde a barra de pesquisa
+    </script>
+    <main>
+        <section class="content-post">
+            <article class="players-post">
+                <div id="screen-post">
+                    <iframe src="" frameborder="0" allowfullscreen allow="encrypted-media"></iframe>
+                </div>
+                <div id="btns-posts">
+                    <button value="https://embedcanaistv.com/espn/">opção 1</button>
+                    <button value="https://embedcanaistv.com/espn2/">opção 2</button>
+                    <button value="https://embedcanaistv.com/espn3/">opção 3</button>
+                    <button value="https://embedcanaistv.com/espn4/">opção 4</button>
+                    <button value="https://embedcanaistv.com/espn5/">opção 5</button>
+                    <button value="https://embedcanaistv.com/espn6/">opção 6</button>
+                    <button value="https://embedcanaistv.com/espn/">opção 7</button>
+                    <button value="https://embedcanaistv.com/espn/">opção 8</button>
+                    <button value="https://embedcanaistv.com/espn/">opção 9</button>
+                    <button value="https://embedcanaistv.com/espn/">opção 10</button>
+                    <button value="https://embedcanaistv.com/espn/">opção 11</button>
+                    <button value="https://embedcanaistv.com/espn/">opção 12</button>
+                    <button value="https://embedcanaistv.com/espn/">opção 13</button>
+                    <button value="https://embedcanaistv.com/espn/">opção 14</button>
+                    <button value="https://embedcanaistv.com/espn/">opção 15</button>
+                </div>
+                <script>
+                    const buttons = document.querySelectorAll('#btns-posts button');
+                    const iframe = document.querySelector('#screen-post iframe');
+                    iframe.src = buttons[0].value; // coloca o primeiro botão como padrão
 
-        <section id="soccer-live">
-        </section>
-        <section class="text-information">
-            <h2>Só aqui no FuteMax</h2>
-            
-            <p>Se você é apaixonado por futebol e não quer perder nenhum lance, o futebol ao vivo no Futemax é a solução perfeita para acompanhar seus jogos favoritos em tempo real. Com uma plataforma rápida, acessível e gratuita, o Futemax oferece transmissões de partidas nacionais e internacionais com excelente qualidade de imagem e som.</p>
-
-            <p>Assistir ao futebol ao vivo no Futemax é simples e prático. Sem a necessidade de cadastro ou mensalidades, você pode curtir campeonatos como Brasileirão, Libertadores, Champions League e muitos outros diretamente do seu celular, tablet ou computador. Tudo isso com links atualizados e uma interface fácil de navegar.</p>
-        </section>
-        <section class="players-modal">
-            <div id="close-modal">
-                <i class="fa-solid fa-circle-xmark"></i>
-            </div>
-            <div id="screen-modal">
-                <iframe src="" frameborder="0" allowfullscreen allow="encrypted-media"></iframe>
-            </div>
-            <div id="btns-modal">
-            </div>
+                    buttons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            const url = button.value;
+                            iframe.src = url;
+                        });
+                    });
+                </script>
+            </article>
+            <aside class="programation">
+                <iframe src="https://meuguia.tv/programacao/canal/ESP" frameborder="0" allowfullscreen allow="encrypted-media" sandbox="allow-scripts"></iframe>
+            </aside>
         </section>
     </main>
     <footer>
@@ -89,7 +108,9 @@
                 </g>
             </svg>
         </a>
-        <p id="aviso">Desbloqueie qualquer site: <a href="https://one.one.one.one/pt-BR/" target="_blank"><img width="846" height="266" src="https://supertvaovivo.fan/wp-content/uploads/2025/03/warp.webp"></a></p>
+        <p id="aviso">Desbloqueie qualquer site: <a href="https://one.one.one.one/pt-BR/" target="_blank"><img
+                    width="846" height="266" src="https://supertvaovivo.fan/wp-content/uploads/2025/03/warp.webp"></a>
+        </p>
         <div id="copy">
             <p>&copy; FuteMax - Todos os Direitos Reservados - 2025</p>
         </div>
