@@ -14,6 +14,11 @@ body {
     position: relative;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 /*Header*/
 header {
     background-color: #222;
@@ -421,14 +426,68 @@ footer {
     width: 550px;
 }
 
-.programation iframe{
+.programation iframe {
     width: 100%;
     height: 71vh;
 }
 
 @media (max-width: 1564px) {
     .programation {
-        width: min(950px,95%);
+        width: min(950px, 95%);
     }
+}
 
+.posts-futemax {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+.posts-futemax article {
+    height: 250px;
+    width: 350px;
+    border: 1px solid #d2ff00;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.posts-futemax img {
+    height: 150px;
+    width: 150px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.posts-futemax i {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 1.5rem;
+    color: #3eff2c;
+    opacity: 0;
+    transition: all 0.3s;
+    background-color: #000000;
+    border-radius: 100%;
+}
+
+.posts-futemax article:hover i {
+    opacity: 1;
+}
+
+.posts-futemax span {
+    border: 1px solid #beff00;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
 }
